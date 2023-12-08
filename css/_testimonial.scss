@@ -1,0 +1,119 @@
+.testimonial{
+    height: 1080px;
+.image-container{
+    max-width: 1080px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+.testimonial{
+    &__main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        
+      &__content{
+        background-color: $secondary-color;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        //grid-template-rows: ;
+        grid-gap: 30px;
+       // width: 20rem;
+        height: auto;
+        margin: 25px 0px 0px 0px;
+        padding: 30px;
+        border-radius: 30px; 
+        img {
+            width: 7rem;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 50%;
+        }
+        .height {
+            height: 10px;
+        }
+        &__text{   
+            //width: 10rem;  
+            text-align: center;   
+            color: white;    
+                
+                p{
+                    padding:10px 5px;
+                }
+                button{
+                    width: 10rem;
+                    height: 40px;
+                    background-color: $button-color;
+                    color: white;
+                    border-radius: 20px;
+                }            
+        }
+
+
+      }
+        
+    }
+}
+}
+
+
+
+    .fa {
+        font-size: 32px;
+    }
+    
+    .fa:hover {
+        transform: rotate(360deg);
+        transition: 1s;
+        color: white;
+    }
+}
+
+
+
+/* Image-container design */
+
+.next1 {
+    right: 0;
+}
+
+
+/* Next and previous icon design */
+.prev,
+.next1 {
+    cursor: pointer;
+    position: absolute;
+    //margin-top: 5%;
+    padding: 10px;
+    //margin-top: -25px;
+    color: $button-color;
+}
+
+/* caption decorate */
+.captionText {
+    color: #000000;
+    font-size: 14px;
+    position: absolute;
+    padding: 12px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.footerdot3 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    display: inline-block;
+    //transition:  0.5s ease;
+}
+
+.active,
+.footerdot:hover {
+    background-color: $button-color;
+}

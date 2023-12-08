@@ -1,0 +1,307 @@
+@import '../config';
+.slider-main{
+    display: flex;
+    flex-direction: row-reverse;
+    &__text{
+        width: 50%;
+        &__head{
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 40px;
+            color: $secondary-color;
+            font-weight: 550;
+        }
+        &__disc{
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 20px;
+            color: $primary_color;
+        }
+        &__price{
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 35px;
+            color: $button-color;
+            font-weight: bold;
+        }
+        table{
+            
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            .qty, .color, .size{
+                color: $secondary-color;
+                
+                th{
+                    width: 7rem;
+                    font-size: 25px;
+                    text-align: left;
+                }
+            }
+            .qty{
+                
+        
+                  &__1{
+                    button{
+                        border-radius: 20px 0px 0px 20px;
+                        width: 40px;
+                        height: 30px; 
+                        background-color: white;
+                        text-align: center;
+                    }
+                  }
+                  &__2{
+                    width: 80px;
+                    height: 30px;
+                    color: white;
+                    background-color: $secondary-color;
+                    text-align: center;
+                    
+                  }
+                  &__3{
+                    button{
+                        border-radius: 0px 20px 20px 0px;
+                        width: 40px;
+                        height: 30px; 
+                        background-color: white;
+                        text-align: center;
+                    }
+                  }
+                  
+                
+            }
+            .color{
+                
+                &__1,&__2,&__3,&__4{
+                    margin-left: 20px;
+                    width: 30px;
+                    height: 30px;
+                }
+                &__1{
+                    background-color: red;
+                
+                }
+                &__2{
+                    background-color: yellow;
+                
+                }
+                &__3{
+                    background-color: black;
+                
+                }
+                &__4{
+                    background-color: white;
+                
+                }
+            }
+            .size{
+                td{
+                    border: 1px solid black;
+                    width: 40px;
+                    text-align: center;
+                }
+            }
+            .button{
+                button{
+                    width: 25rem;
+                    height: 3rem;
+                    background-color: $button-color;
+                    color: white;
+                    border-radius: 10px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &__img{
+        width: 50%;
+        margin: 10px;
+    }
+}
+.text{
+    width: 90%;
+    margin:10px auto;
+    &_1{
+        hr{
+            background-color: black;
+            height: 1px;
+        }
+        width: 60%;
+        h2{
+            font-size:40px ;
+            color: $primary_color;
+        }
+        p{
+            font-size: 20px;
+            color: $secondary-color;
+        }
+    }
+    
+}
+.gallery-outer{
+    overflow: hidden;
+    height: 80vh;
+    width: 90%;
+    margin: 10px auto;
+}
+.product_gallery-head{
+    h2{
+        font-size: 40px;
+        color: $primary_color;
+    }
+}
+.product_gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 500px;
+    
+    
+    .div1 { grid-area: 1 / 1 / 2 / 3; 
+    img{
+        width:100%;
+        height:100%;
+    }
+    }
+    .div2 { grid-area: 1 / 3 / 2 / 4; 
+    img{
+        width:100%;
+        height:100%;
+    }
+    }
+    .div3 { grid-area: 2 / 1 / 3 / 2; 
+    img{
+        width:100%;
+        height:100%;
+    }
+    }
+    .div4 { grid-area: 2 / 2 / 3 / 4; 
+    img{
+        width:100%;
+        height:100%;
+    }
+    }
+}
+
+.question{
+    box-shadow: 0px 0px 3px black;
+    width: 90%;
+    margin:10px auto;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(23,23,23,0.5) 100%), url("https://images.unsplash.com/photo-1518384401463-d3876163c195?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+    &_head{
+        font-size: 40px;
+        color: white;
+        padding: 20px;
+    }
+    table{
+            margin: 10px auto;
+            .head{
+                font-size: 25px;
+                padding-top: 20px;
+                color: white;
+            }
+            input,textarea{
+                width: 150%;
+                border-radius: 10px;
+                font-size: 16px;
+
+                
+            }
+    }
+    .submit{
+        margin: 0px auto;
+    display: block;
+    width: 50%;
+    background-color: $button-color;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    border:none;
+    padding: 10px;
+    &:hover{
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid $button-color;
+        color: white;
+    }
+    }
+}
+@media  screen and (max-width:800px) {
+    .slider-main{
+        flex-direction: column-reverse;
+        &__text,&__img{
+            width: 90%;
+            margin: 10px auto;
+        }
+        
+    }
+    .text{
+        &_1{
+            width: 80%;
+            
+        }
+    }
+    .question{
+        &_head{
+            font-size: 40px;
+           
+            padding: 20px;
+        }
+        table{
+                margin: 10px auto;
+                .head{
+                    font-size: 25px;
+                    padding-top: 20px;
+                }
+                input,textarea{
+                    width: 100%;
+                    border-radius: 10px;    
+                    
+                }
+        }
+        
+    }
+}
+@media  screen and(max-width:500px) {
+    .slider-main{
+        &__text{
+            &__head{
+                font-size: 30px;
+            }
+            &__disc{
+                font-size: 14px;
+            }
+            &__price{
+                font-size: 25px;
+            }
+            table{
+                .button{
+                    button{
+                        width: 15rem;
+                    }
+                }
+            }
+        }
+    }
+    .qty, .color, .size{
+        font-size: 20px;
+    }
+    .text_1{
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+    .product_gallery-head{
+        h2{
+            font-size: 30px;
+        }
+    }
+    .product_gallery{
+        height: auto;
+    }
+}
